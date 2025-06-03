@@ -28,16 +28,12 @@ Sofern Docker korrekt installiert ist, können sofort Videos heruntergeladen wer
 
 ```bash
 git clone https://github.com/profhccaesar/docker-ard-plus-dl.git [{dir}]
-chmod +x ./docker-ard-plus-dl
 ```
 Konkretes Beispiel:
 
 ```bash
 myuser@mypc:~$ git clone https://github.com/profhccaesar/docker-ard-plus-dl.git ./docker-ard-plus-dl
-chmod +x ./docker-ard-plus-dl
 ```
-
-
 
 ## Download durchführen
 
