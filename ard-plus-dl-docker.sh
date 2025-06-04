@@ -66,7 +66,6 @@ man muss sich nicht mehr um irgendwelche Abhängigkeiten kümmern.
 
 forceCreateImage=
 startScript="${START_SCRIPT}"
-runInteractive=
 runAsRoot=
 cmdlineArgs=
 outputDir="${DEFAULT_OUTPUT_DIR}"
@@ -79,10 +78,6 @@ do
       ;;
     --bash)
       startScript="bash"
-      runInteractive="-it"
-      ;;
-    --interactive)
-      runInteractive="-it"
       ;;
     --root)
       runAsRoot="--user root"
@@ -135,7 +130,7 @@ then
 fi
 
 # Befehl im Image starten.
-eval docker run --rm ${runInteractive} ${runAsRoot} \
+eval docker run --rm -it ${runAsRoot} \
         --name "${DOCKER_IMAGE}" \
         --volume "${outputDir}:${HOME}/output" \
         "${DOCKER_IMAGE}" \

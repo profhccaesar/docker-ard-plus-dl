@@ -1,6 +1,15 @@
+---
+subject : "Download Videos von ardplus.de"
+title : "Docker-Image für marco79cgn/ard-plus-dl.sh"
+subtitle : "Beschreibung des Docker-Images"
+author : "[profhccaesar@web.de](mailto:profhccaesar@web.de)"
+keywords: ["Docker"]
+lang: "de"
+---
+
 # Überblick
 
-[marco79cgn](https://gist.github.com/marco79cgn) stellt als GitHub GIST das Skript [`ard-plus-dl.sh`](https://gist.github.com/marco79cgn/b09e26beaaf466cb04f9d74122866048), das unter Zuhilfenahme von [yt-dlp](https://github.com/yt-dlp/yt-dlp) das Herunterladen von Videos bei ARDplus zu einem Kinderspiel macht.
+[marco79cgn](https://gist.github.com/marco79cgn) stellt als GitHub GIST das Skript [`ard-plus-dl.sh`](https://gist.github.com/marco79cgn/b09e26beaaf466cb04f9d74122866048) zur Verfügung, das durch Zuhilfenahme von [yt-dlp](https://github.com/yt-dlp/yt-dlp) das Herunterladen von Videos bei ARDplus zu einem Kinderspiel macht.
 
 Allerdings benötigt das Skript diverse Hilfsprogramme - vor allem curl. Leider arbeiten nicht alle Versionen von curl wie benötigt, je nach verwendetem Betriebssystem muss mehr oder weniger aufwändig die korrekte Version beschafft werden.
 
@@ -20,7 +29,7 @@ Diese drei Dateien müssen in einem beliebigen Verzeichnis abgelegt werden - Sch
 
 # Verwendung
 
-Alle für das Image benötigte Dateien (siehe ["Struktur"]) müssen in einem beliebigen Verzeichnis abgelegt werden - Schreibzugriff ist keiner erforderlich. `ardplus-dl-docker.sh` muss jedoch ausführbar gemacht werden.
+Alle für das Image benötigte Dateien (siehe ["Struktur"](#struktur)) müssen in einem beliebigen Verzeichnis abgelegt werden - Schreibzugriff ist keiner erforderlich. `ardplus-dl-docker.sh` muss jedoch ausführbar gemacht werden.
 
 Sofern Docker korrekt installiert ist, können sofort Videos heruntergeladen werden.
 

@@ -32,7 +32,7 @@ RUN echo "dash dash/sh boolean false" | debconf-set-selections && \
   DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
 
 # Benötigte Binaries installieren
-RUN apt-get install -y curl jq ffmpeg git python3
+RUN apt-get install -y curl jq ffmpeg git python3 bsdextrautils
 
 # === yt-dlp und ardplus-dl installieren
 RUN cd /opt && git clone "${YTDLP_GIT_URL}" yt-dlp && \
