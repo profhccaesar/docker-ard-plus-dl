@@ -4,7 +4,7 @@
 #
 
 cd "${HOME}/output"
-ard-plus-dl.sh "$@"
+ard-plus-dl "$@"
 rc=$?
 
 # cleanup

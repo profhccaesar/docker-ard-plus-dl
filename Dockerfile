@@ -9,7 +9,7 @@ FROM ubuntu:noble
 
 # === Optionen
 ARG YTDLP_GIT_URL="https://github.com/yt-dlp/yt-dlp.git"
-ARG ARDPLUS_DOWNLOAD_URL="https://gist.githubusercontent.com/marco79cgn/b09e26beaaf466cb04f9d74122866048/raw/e6b7e821084b0b52406e6cb675821a3ee2794916/ard-plus-dl.sh"
+ARG ARDPLUS_GIT_URL="https://github.com/marco79cgn/ard-plus-dl"
 
 ARG DEFAULT_USER=ardplus-dl
 ARG DEFAULT_USER_ID=1000
@@ -38,8 +38,10 @@ RUN apt-get install -y curl jq ffmpeg git python3 bsdextrautils
 RUN cd /opt && git clone "${YTDLP_GIT_URL}" yt-dlp && \
   chmod ugo+rx /opt/yt-dlp/yt-dlp.sh && \
   ln -s /opt/yt-dlp/yt-dlp.sh /usr/local/bin/yt-dlp
-RUN curl -o /usr/local/bin/ard-plus-dl.sh "${ARDPLUS_DOWNLOAD_URL}" && \
-  chmod ugo+rx /usr/local/bin/ard-plus-dl.sh
+
+RUN cd /opt && git clone "${ARDPLUS_GIT_URL}" ard-plus-dl && \
+  chmod ugo+rx /opt/ard-plus-dl/ard-plus-dl.sh && \
+  ln -s /opt/ard-plus-dl/ard-plus-dl.sh /usr/local/bin/ard-plus-dl
 
 # === Startskript
 
